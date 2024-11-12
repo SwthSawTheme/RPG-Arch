@@ -1,0 +1,64 @@
++------------------+
+|      Jogo        |
++------------------+
+| - nome: str      |
+| - jogador: Jogador|
+| - mobs: Mob[]    |
++------------------+
+| + iniciar(): void|
+| + gerarMob(): Mob|
++------------------+
+
++------------------+
+|    Jogador       |
++------------------+
+| - nome: str      |
+| - saude: int     |
+| - dano: int      |
+| - flechas: int   |
++------------------+
+| + atacar(m: Mob): void|
+| + pegarFlechas(qtd: int): void |
+| + tomarDano(valor: int): void |
+| + estaVivo(): bool       |
++------------------+
+
++------------------+
+|     Mob          |
++------------------+
+| - tipo: str      |
+| - saude: int     |
+| - dano: int      |
++------------------+
+| + atacar(j: Jogador): void |
+| + tomarDano(valor: int): void |
+| + estaVivo(): bool       |
++------------------+
+
++------------------+
+|     Arqueiro     |
++------------------+
+| - nome: str      |
+| - flechas: int   |
++------------------+
+| + atacar(m: Mob): void|
+| + pegarFlechas(qtd: int): void |
+| + estaVivo(): bool       |
++------------------+
+
++------------------+
+|     Mobs         |
++------------------+
+| + gerarMobAleatorio(): Mob |
++------------------+
+
++---------------------------+
+|     AdventureTextGame     |
++---------------------------+
+| - jogador: Arqueiro       |
+| - mobs: Mob[]             |
++---------------------------+
+| + iniciarAventura(): void |
+| + gerarMob(): Mob         |
+| + checarStatus(): str     |
++---------------------------+
