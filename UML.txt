@@ -1,64 +1,64 @@
 +------------------+
-|      Jogo        |
+|      Game        |
 +------------------+
-| - nome: str      |
-| - jogador: Jogador|
+| - name: str      |
+| - player: Player |
 | - mobs: Mob[]    |
 +------------------+
-| + iniciar(): void|
-| + gerarMob(): Mob|
+| + start(): void  |
+| + spawnMob(): Mob|
 +------------------+
 
 +------------------+
-|    Jogador       |
+|      Player      |
 +------------------+
-| - nome: str      |
-| - saude: int     |
-| - dano: int      |
-| - flechas: int   |
+| - name: str      |
+| - health: int    |
+| - damage: int    |
+| - arrows: int    |
 +------------------+
-| + atacar(m: Mob): void|
-| + pegarFlechas(qtd: int): void |
-| + tomarDano(valor: int): void |
-| + estaVivo(): bool       |
-+------------------+
-
-+------------------+
-|     Mob          |
-+------------------+
-| - tipo: str      |
-| - saude: int     |
-| - dano: int      |
-+------------------+
-| + atacar(j: Jogador): void |
-| + tomarDano(valor: int): void |
-| + estaVivo(): bool       |
+| + attack(m: Mob): void    |
+| + collectArrows(qty: int): void |
+| + takeDamage(value: int): void  |
+| + isAlive(): bool       |
 +------------------+
 
 +------------------+
-|     Arqueiro     |
+|       Mob        |
 +------------------+
-| - nome: str      |
-| - flechas: int   |
+| - type: str      |
+| - health: int    |
+| - damage: int    |
 +------------------+
-| + atacar(m: Mob): void|
-| + pegarFlechas(qtd: int): void |
-| + estaVivo(): bool       |
+| + attack(p: Player): void |
+| + takeDamage(value: int): void |
+| + isAlive(): bool          |
 +------------------+
 
 +------------------+
-|     Mobs         |
+|     Archer       |
 +------------------+
-| + gerarMobAleatorio(): Mob |
+| - name: str      |
+| - arrows: int    |
++------------------+
+| + attack(m: Mob): void    |
+| + collectArrows(qty: int): void |
+| + isAlive(): bool          |
++------------------+
+
++------------------+
+|      Mobs        |
++------------------+
+| + generateRandomMob(): Mob |
 +------------------+
 
 +---------------------------+
-|     AdventureTextGame     |
+|  AdventureTextGame        |
 +---------------------------+
-| - jogador: Arqueiro       |
+| - player: Archer          |
 | - mobs: Mob[]             |
 +---------------------------+
-| + iniciarAventura(): void |
-| + gerarMob(): Mob         |
-| + checarStatus(): str     |
+| + startAdventure(): void  |
+| + spawnMob(): Mob         |
+| + checkStatus(): str      |
 +---------------------------+
