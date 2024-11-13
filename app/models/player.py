@@ -1,3 +1,4 @@
+from mob import Mob
 
 
 class Player(object):
@@ -9,7 +10,7 @@ class Player(object):
         self.damage = damage
         self.arrows = arrows
 
-    def attack(self,mob):
+    def attack(self,mob:"Mob"):
         pass
 
     def collectArrows(self,qty:int):
