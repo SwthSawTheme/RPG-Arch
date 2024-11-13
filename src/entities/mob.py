@@ -1,4 +1,3 @@
-from src.characters.player import Player
 import random
 
 class Mob(object):
@@ -10,7 +9,7 @@ class Mob(object):
         self.health = health
         self.damage = damage
 
-    def attack(self,player:"Player"):
+    def attack(self,player):
         print(f"{self.type} ataca {player.name} causando {self.damage} de dano.")
         player.takeDamage(self.damage)
 

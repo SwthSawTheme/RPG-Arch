@@ -17,3 +17,5 @@ class Game(object):
 
     def spawnMob(self):
         mob = Mob.generateRandomMob()
+        self.mobs.append(mob)
+        print(f"Um {mob.type} apareceu!")
