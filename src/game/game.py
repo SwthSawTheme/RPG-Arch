@@ -1,4 +1,4 @@
-
+from src.entities.mob import Mob
 
 class Game(object):
 
@@ -15,4 +15,4 @@ class Game(object):
         self.spawnMob()
 
     def spawnMob(self):
-        mob = Mobs.generateRandomMob()
+        mob = Mob.generateRandomMob()
