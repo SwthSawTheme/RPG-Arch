@@ -1,4 +1,4 @@
-from player import Player
+from src.characters.player import Player
 
 class Mob(object):
 
