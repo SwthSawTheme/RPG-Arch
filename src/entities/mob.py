@@ -11,13 +11,16 @@ class Mob(object):
         self.damage = damage
 
     def attack(self,player:"Player"):
-        pass
+        print(f"{self.type} ataca {player.name} causando {self.damage} de dano.")
+        player.takeDamage(self.damage)
 
     def takeDamage(self,value:int):
-        pass
+        self.health -= value
+        print(f"{self.type} tomou {value} de dano! Vida atual: {self.health}")
+
 
     def isAlive(self) -> bool:
-        pass
+        return self.health > 0
 
     @classmethod
     def generateRandomMob(cls):

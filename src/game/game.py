@@ -1,4 +1,5 @@
 from src.entities.mob import Mob
+from src.characters.archery import Archery
 
 class Game(object):
 
@@ -11,7 +12,7 @@ class Game(object):
 
     def start(self):
         print(f"Bem vindo a Arch-RPG {self.name}")
-        self.player = archery(input("Qual o seu nome bravo arqueiro: "))
+        self.player = Archery(input("Qual o seu nome bravo arqueiro: "))
         self.spawnMob()
 
     def spawnMob(self):
